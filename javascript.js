@@ -10,6 +10,8 @@ botao.addEventListener('click', () => {
 
     let resultadoimc = document.querySelector('#resultado');
 
+
+
     if (calculo < 18.5) {
         resultadoimc.innerHTML = 'Abaixo do peso';
     } else if (calculo < 24.9) {
