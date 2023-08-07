@@ -3,24 +3,20 @@ botao.addEventListener('click', () => {
     let pesoinput = document.querySelector('#peso').value;
     let alturainput = document.querySelector('#altura').value;
 
-    let peso = parseInt(pesoinput);
-    let altura = parseInt(alturainput);
+    let peso = parseFloat(pesoinput);
+    let altura = parseFloat(alturainput) / 100;  
 
     let calculo = peso / (altura * altura);
 
-    if(calculo <= '20'){
-        document.querySelector('#resultado').innerHTML = 'estás no peso ideal';
-    }else{
-        document.querySelector('#resultado').innerHTML = ''
+    let resultadoimc = document.querySelector('#resultado');
+
+    if (calculo < 18.5) {
+        resultadoimc.innerHTML = 'Abaixo do peso';
+    } else if (calculo < 24.9) {
+        resultadoimc.innerHTML = 'Peso ideal';
+    } else if (calculo < 29.9) {
+        resultadoimc.innerHTML = 'Acima do peso';
+    } else {
+        resultadoimc.innerHTML = 'Obeso';
     }
 });
-
-
-
-
-
-
-
-
-
-
