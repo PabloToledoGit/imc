@@ -31,6 +31,13 @@ body{
 	color: white;
 	align-items: center;
 	justify-content: center;
+	font-weight: 600;
+}
+
+.titulo__pesoaltura{
+
+	font-size: 1.3rem;
+	font-weight: 600;
 }
 
 .div__imc{

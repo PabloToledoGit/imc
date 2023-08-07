@@ -9,16 +9,14 @@ botao.addEventListener('click', () => {
     let calculo = peso / (altura * altura);
 
     let resultadoimc = document.querySelector('#resultado');
-
-
-
+    
     if (calculo < 18.5) {
-        resultadoimc.innerHTML = 'Abaixo do peso';
+        resultadoimc.innerHTML = 'Você está abaixo do peso';
     } else if (calculo < 24.9) {
-        resultadoimc.innerHTML = 'Peso ideal';
+        resultadoimc.innerHTML = 'Você está no peso ideal';
     } else if (calculo < 29.9) {
-        resultadoimc.innerHTML = 'Acima do peso';
+        resultadoimc.innerHTML = 'Você está acima do peso';
     } else {
-        resultadoimc.innerHTML = 'Obeso';
+        resultadoimc.innerHTML = 'Você está em estádo de obesidade';
     }
 });
